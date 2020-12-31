@@ -35,6 +35,8 @@
 		52055E7A259DFD34003BACAF /* NewJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E79259DFD34003BACAF /* NewJobView.swift */; };
 		52055E7D259DFDD9003BACAF /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E7C259DFDD9003BACAF /* Job.swift */; };
 		52055E80259DFE00003BACAF /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E7F259DFE00003BACAF /* Jobs.swift */; };
+		52055E83259E0263003BACAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52055E82259E0263003BACAF /* GoogleService-Info.plist */; };
+		52055E88259E09D0003BACAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E87259E09D0003BACAF /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		52055E79259DFD34003BACAF /* NewJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobView.swift; sourceTree = "<group>"; };
 		52055E7C259DFDD9003BACAF /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		52055E7F259DFE00003BACAF /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
+		52055E82259E0263003BACAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52055E87259E09D0003BACAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +112,10 @@
 				52055E56259DF5D2003BACAF /* Users */,
 				52055E54259DF5D2003BACAF /* Utiilities */,
 				52055E2C259DE553003BACAF /* HandymanApp.swift */,
+				52055E87259E09D0003BACAF /* AppDelegate.swift */,
 				52055E30259DE554003BACAF /* Assets.xcassets */,
 				52055E35259DE554003BACAF /* Info.plist */,
+				52055E82259E0263003BACAF /* GoogleService-Info.plist */,
 				52055E32259DE554003BACAF /* Preview Content */,
 			);
 			path = Handyman;
@@ -269,6 +275,7 @@
 			files = (
 				52055E34259DE554003BACAF /* Preview Assets.xcassets in Resources */,
 				52055E31259DE554003BACAF /* Assets.xcassets in Resources */,
+				52055E83259E0263003BACAF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52055E88259E09D0003BACAF /* AppDelegate.swift in Sources */,
 				52055E71259DF5D2003BACAF /* MessagesView.swift in Sources */,
 				52055E69259DF5D2003BACAF /* ProfileView.swift in Sources */,
 				52055E72259DF5D2003BACAF /* Chat.swift in Sources */,
@@ -437,7 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sorin.Handyman;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorin.handyman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sorin.Handyman;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorin.handyman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

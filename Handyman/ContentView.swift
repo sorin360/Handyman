@@ -18,16 +18,22 @@ struct ContentView: View {
             TabView(selection: $selectedTab) {
                 UsersView()
                     .tabItem {
-                        Image(systemName: "house")
-                        Text("Home")
+                        Image(systemName: "person.3")
+                        Text(selectedTab)
                     }
                     .tag("Users")
+                JobsView()
+                    .tabItem {
+                        Image(systemName: "briefcase")
+                        Text(selectedTab)
+                    }
+                    .tag("jobs")
                 (Auth.auth().currentUser == nil ?
                     AnyView(LoggedOutView(selectedTab: $selectedTab)):
                     AnyView(ChatsView()))
                     .tabItem {
                         Image(systemName: "message")
-                        Text("Home")
+                        Text(selectedTab)
                     }
                     .tag("Chats")
                 (Auth.auth().currentUser == nil ?
@@ -35,7 +41,7 @@ struct ContentView: View {
                     AnyView(ProfileView(selectedTab: $selectedTab)))
                     .tabItem {
                         Image(systemName: "person")
-                        Text("Home")
+                        Text(selectedTab)
                     }
                     .tag("Profile")
             }
