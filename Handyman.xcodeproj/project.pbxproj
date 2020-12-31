@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		52055E2F259DE553003BACAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E2E259DE553003BACAF /* ContentView.swift */; };
 		52055E31259DE554003BACAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52055E30259DE554003BACAF /* Assets.xcassets */; };
 		52055E34259DE554003BACAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52055E33259DE554003BACAF /* Preview Assets.xcassets */; };
+		52055E3E259DE949003BACAF /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E3D259DE949003BACAF /* FirebaseFunctions */; };
+		52055E40259DE949003BACAF /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E3F259DE949003BACAF /* FirebaseMessaging */; };
+		52055E42259DE949003BACAF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E41259DE949003BACAF /* FirebaseAuth */; };
+		52055E44259DE949003BACAF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E43259DE949003BACAF /* FirebaseFirestore */; };
+		52055E46259DE949003BACAF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E45259DE949003BACAF /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52055E40259DE949003BACAF /* FirebaseMessaging in Frameworks */,
+				52055E44259DE949003BACAF /* FirebaseFirestore in Frameworks */,
+				52055E42259DE949003BACAF /* FirebaseAuth in Frameworks */,
+				52055E46259DE949003BACAF /* FirebaseStorage in Frameworks */,
+				52055E3E259DE949003BACAF /* FirebaseFunctions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,13 @@
 			dependencies = (
 			);
 			name = Handyman;
+			packageProductDependencies = (
+				52055E3D259DE949003BACAF /* FirebaseFunctions */,
+				52055E3F259DE949003BACAF /* FirebaseMessaging */,
+				52055E41259DE949003BACAF /* FirebaseAuth */,
+				52055E43259DE949003BACAF /* FirebaseFirestore */,
+				52055E45259DE949003BACAF /* FirebaseStorage */,
+			);
 			productName = Handyman;
 			productReference = 52055E29259DE553003BACAF /* Handyman.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 52055E20259DE553003BACAF;
+			packageReferences = (
+				52055E3C259DE949003BACAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 52055E2A259DE553003BACAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -328,6 +348,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52055E3C259DE949003BACAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52055E3D259DE949003BACAF /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52055E3C259DE949003BACAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		52055E3F259DE949003BACAF /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52055E3C259DE949003BACAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		52055E41259DE949003BACAF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52055E3C259DE949003BACAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		52055E43259DE949003BACAF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52055E3C259DE949003BACAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		52055E45259DE949003BACAF /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52055E3C259DE949003BACAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52055E21259DE553003BACAF /* Project object */;
 }
