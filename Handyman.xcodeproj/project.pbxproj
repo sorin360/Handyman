@@ -16,7 +16,7 @@
 		52055E42259DE949003BACAF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E41259DE949003BACAF /* FirebaseAuth */; };
 		52055E44259DE949003BACAF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E43259DE949003BACAF /* FirebaseFirestore */; };
 		52055E46259DE949003BACAF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E45259DE949003BACAF /* FirebaseStorage */; };
-		52055E64259DF5D2003BACAF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E4C259DF5D2003BACAF /* HomeView.swift */; };
+		52055E64259DF5D2003BACAF /* JobsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E4C259DF5D2003BACAF /* JobsView.swift */; };
 		52055E65259DF5D2003BACAF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E4E259DF5D2003BACAF /* RegistrationView.swift */; };
 		52055E66259DF5D2003BACAF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E4F259DF5D2003BACAF /* LoginView.swift */; };
 		52055E67259DF5D2003BACAF /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E50259DF5D2003BACAF /* AuthView.swift */; };
@@ -32,6 +32,9 @@
 		52055E72259DF5D2003BACAF /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E61259DF5D2003BACAF /* Chat.swift */; };
 		52055E73259DF5D2003BACAF /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E62259DF5D2003BACAF /* ChatsView.swift */; };
 		52055E74259DF5D2003BACAF /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E63259DF5D2003BACAF /* Chats.swift */; };
+		52055E7A259DFD34003BACAF /* NewJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E79259DFD34003BACAF /* NewJobView.swift */; };
+		52055E7D259DFDD9003BACAF /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E7C259DFDD9003BACAF /* Job.swift */; };
+		52055E80259DFE00003BACAF /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E7F259DFE00003BACAF /* Jobs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +44,7 @@
 		52055E30259DE554003BACAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52055E33259DE554003BACAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52055E35259DE554003BACAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52055E4C259DF5D2003BACAF /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		52055E4C259DF5D2003BACAF /* JobsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsView.swift; sourceTree = "<group>"; };
 		52055E4E259DF5D2003BACAF /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		52055E4F259DF5D2003BACAF /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		52055E50259DF5D2003BACAF /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		52055E61259DF5D2003BACAF /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		52055E62259DF5D2003BACAF /* ChatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
 		52055E63259DF5D2003BACAF /* Chats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
+		52055E79259DFD34003BACAF /* NewJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobView.swift; sourceTree = "<group>"; };
+		52055E7C259DFDD9003BACAF /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		52055E7F259DFE00003BACAF /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,14 +100,14 @@
 		52055E2B259DE553003BACAF /* Handyman */ = {
 			isa = PBXGroup;
 			children = (
+				52055E2E259DE553003BACAF /* ContentView.swift */,
 				52055E4D259DF5D2003BACAF /* Auth */,
 				52055E5B259DF5D2003BACAF /* Chat */,
-				52055E4B259DF5D2003BACAF /* Home */,
+				52055E4B259DF5D2003BACAF /* Jobs */,
 				52055E52259DF5D2003BACAF /* Profile */,
 				52055E56259DF5D2003BACAF /* Users */,
 				52055E54259DF5D2003BACAF /* Utiilities */,
 				52055E2C259DE553003BACAF /* HandymanApp.swift */,
-				52055E2E259DE553003BACAF /* ContentView.swift */,
 				52055E30259DE554003BACAF /* Assets.xcassets */,
 				52055E35259DE554003BACAF /* Info.plist */,
 				52055E32259DE554003BACAF /* Preview Content */,
@@ -117,12 +123,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		52055E4B259DF5D2003BACAF /* Home */ = {
+		52055E4B259DF5D2003BACAF /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
-				52055E4C259DF5D2003BACAF /* HomeView.swift */,
+				52055E4C259DF5D2003BACAF /* JobsView.swift */,
+				52055E79259DFD34003BACAF /* NewJobView.swift */,
+				52055E7C259DFDD9003BACAF /* Job.swift */,
+				52055E7F259DFE00003BACAF /* Jobs.swift */,
 			);
-			path = Home;
+			path = Jobs;
 			sourceTree = "<group>";
 		};
 		52055E4D259DF5D2003BACAF /* Auth */ = {
@@ -273,11 +282,12 @@
 				52055E71259DF5D2003BACAF /* MessagesView.swift in Sources */,
 				52055E69259DF5D2003BACAF /* ProfileView.swift in Sources */,
 				52055E72259DF5D2003BACAF /* Chat.swift in Sources */,
+				52055E80259DFE00003BACAF /* Jobs.swift in Sources */,
 				52055E68259DF5D2003BACAF /* LoggedOutView.swift in Sources */,
 				52055E6B259DF5D2003BACAF /* Users.swift in Sources */,
 				52055E6F259DF5D2003BACAF /* Messages.swift in Sources */,
 				52055E73259DF5D2003BACAF /* ChatsView.swift in Sources */,
-				52055E64259DF5D2003BACAF /* HomeView.swift in Sources */,
+				52055E64259DF5D2003BACAF /* JobsView.swift in Sources */,
 				52055E6A259DF5D2003BACAF /* UICustomImagePicker.swift in Sources */,
 				52055E2F259DE553003BACAF /* ContentView.swift in Sources */,
 				52055E67259DF5D2003BACAF /* AuthView.swift in Sources */,
@@ -285,9 +295,11 @@
 				52055E6D259DF5D2003BACAF /* User.swift in Sources */,
 				52055E74259DF5D2003BACAF /* Chats.swift in Sources */,
 				52055E66259DF5D2003BACAF /* LoginView.swift in Sources */,
+				52055E7A259DFD34003BACAF /* NewJobView.swift in Sources */,
 				52055E70259DF5D2003BACAF /* Message.swift in Sources */,
 				52055E6C259DF5D2003BACAF /* UsersView.swift in Sources */,
 				52055E65259DF5D2003BACAF /* RegistrationView.swift in Sources */,
+				52055E7D259DFDD9003BACAF /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
