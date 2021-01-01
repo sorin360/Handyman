@@ -19,10 +19,14 @@ struct LoginView: View {
     var body: some View {
         Section(header: Text("Email")) {
             TextField("", text: $email)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
         }
         
         Section(header: Text("Password")) {
             TextField("", text: $password)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
         }
         Section {
             Button(action: {

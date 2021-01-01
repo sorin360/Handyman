@@ -27,7 +27,7 @@ struct ContentView: View {
                         Image(systemName: "briefcase")
                         Text(selectedTab)
                     }
-                    .tag("jobs")
+                    .tag("Jobs")
                 (Auth.auth().currentUser == nil ?
                     AnyView(LoggedOutView(selectedTab: $selectedTab)):
                     AnyView(ChatsView()))
@@ -47,39 +47,8 @@ struct ContentView: View {
             }
             .navigationBarTitle(selectedTab)
         }
-    }
-}
-
-struct LoggedOutView: View {
-    
-    @State var presentLogin = false
-    
-    @Binding var selectedTab: String
-    
-    var body: some View {
-        
-        VStack(alignment: .center) {
-            Spacer()
-            Text("Ups... you are not logged in yet")
-            Text("Please")
-            HStack {
-                Button("Login") {
-                    self.presentLogin = true
-                }
-                Text("or")
-                Button("SignUp") {
-                    self.presentLogin = true
-                }
-            }
-            Spacer()
-        }
-        .frame(maxWidth: .infinity)
-        .sheet(isPresented: $presentLogin, onDismiss: {
-            selectedTab = "User"
-        }) {
-            AuthView(presentLogin: self.$presentLogin)
-        }
-        
+        .navigationViewStyle(StackNavigationViewStyle())
+  
     }
 }
 

@@ -18,22 +18,42 @@ struct RegistrationView: View {
     @State var name = ""
     @State var email = ""
     @State var password = ""
-    @State var image: UIImage?
+    @State var image: UIImage = UIImage(systemName: "photo") ?? UIImage.init()
     
     var body: some View {
-        VStack {
-            image != nil ? Image(uiImage: image!).resizable().scaledToFit() : nil
-            
-            NavigationLink(destination: UICustomImagePicker(isShown: $showCamera, sourceType: .photoLibrary) { self.image = $0 }
-                            .navigationBarTitle("")
-                            .navigationBarHidden(true),
-                           isActive: $showCamera, label: { Text("Upload image") })
-            
-            TextField("Name", text: $name)
-            TextField("Email", text: $email)
-            TextField("Password", text: $password)
-            
-            Button("Register") {
+        
+        Section {
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+                .clipShape(Circle())
+                .onTapGesture { showCamera.toggle() }
+                .sheet(isPresented: $showCamera) {
+                    UICustomImagePicker(isShown: $showCamera, sourceType: .photoLibrary) { self.image = $0 }
+                }
+        }
+        .listRowBackground(Color(UIColor.systemGroupedBackground))
+        
+        Section(header: Text("Name")) {
+            TextField("John", text: $name)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+        }
+        
+        Section(header: Text("Email")) {
+            TextField("John@mail.com", text: $email)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+        }
+        
+        Section(header: Text("Password")) {
+            TextField("******", text: $password)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+        }
+        
+        Section {
+            Button(action: {
                 Auth.auth().createUser(withEmail: self.email, password: self.password) { authResult, error in
                     guard error == nil else {
                         print("Create user error: \(error!)")
@@ -41,7 +61,7 @@ struct RegistrationView: View {
                     }
                     
                     let storageRef = Storage.storage().reference().child(UUID().uuidString + ".png")
-                    storageRef.putData(self.image?.jpegData(compressionQuality: 0.1) ?? Data(), metadata: nil) { (_, error) in
+                    storageRef.putData(self.image.jpegData(compressionQuality: 0.01) ?? Data(), metadata: nil) { (_, error) in
                         guard error == nil else {
                             print("Save image: \(error!)")
                             return
@@ -70,7 +90,14 @@ struct RegistrationView: View {
                 }
                 
             }
+            ) {
+                VStack(alignment: .center) {
+                    Text("Register")
+                }
+                .frame(maxWidth: .infinity)
+            }
         }
+        .listRowBackground(Color(UIColor.systemGroupedBackground))
     }
 }
 
