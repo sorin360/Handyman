@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52055E2D259DE553003BACAF /* HandymanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E2C259DE553003BACAF /* HandymanApp.swift */; };
-		52055E2F259DE553003BACAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E2E259DE553003BACAF /* ContentView.swift */; };
+		52055E2F259DE553003BACAF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E2E259DE553003BACAF /* RootView.swift */; };
 		52055E31259DE554003BACAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52055E30259DE554003BACAF /* Assets.xcassets */; };
 		52055E34259DE554003BACAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52055E33259DE554003BACAF /* Preview Assets.xcassets */; };
 		52055E3E259DE949003BACAF /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 52055E3D259DE949003BACAF /* FirebaseFunctions */; };
@@ -37,12 +37,13 @@
 		52055E80259DFE00003BACAF /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E7F259DFE00003BACAF /* Jobs.swift */; };
 		52055E83259E0263003BACAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52055E82259E0263003BACAF /* GoogleService-Info.plist */; };
 		52055E88259E09D0003BACAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52055E87259E09D0003BACAF /* AppDelegate.swift */; };
+		52E43E20259F223500B01C47 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E43E1F259F223500B01C47 /* Root.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52055E29259DE553003BACAF /* Handyman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handyman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52055E2C259DE553003BACAF /* HandymanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandymanApp.swift; sourceTree = "<group>"; };
-		52055E2E259DE553003BACAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52055E2E259DE553003BACAF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		52055E30259DE554003BACAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52055E33259DE554003BACAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52055E35259DE554003BACAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		52055E7F259DFE00003BACAF /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
 		52055E82259E0263003BACAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52055E87259E09D0003BACAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52E43E1F259F223500B01C47 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +106,7 @@
 		52055E2B259DE553003BACAF /* Handyman */ = {
 			isa = PBXGroup;
 			children = (
-				52055E2E259DE553003BACAF /* ContentView.swift */,
+				52E43E1E259F222300B01C47 /* Root */,
 				52055E4D259DF5D2003BACAF /* Auth */,
 				52055E5B259DF5D2003BACAF /* Chat */,
 				52055E4B259DF5D2003BACAF /* Jobs */,
@@ -206,6 +208,15 @@
 			path = Chats;
 			sourceTree = "<group>";
 		};
+		52E43E1E259F222300B01C47 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				52055E2E259DE553003BACAF /* RootView.swift */,
+				52E43E1F259F223500B01C47 /* Root.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,13 +308,14 @@
 				52055E73259DF5D2003BACAF /* ChatsView.swift in Sources */,
 				52055E64259DF5D2003BACAF /* JobsView.swift in Sources */,
 				52055E6A259DF5D2003BACAF /* UICustomImagePicker.swift in Sources */,
-				52055E2F259DE553003BACAF /* ContentView.swift in Sources */,
+				52055E2F259DE553003BACAF /* RootView.swift in Sources */,
 				52055E67259DF5D2003BACAF /* AuthView.swift in Sources */,
 				52055E2D259DE553003BACAF /* HandymanApp.swift in Sources */,
 				52055E6D259DF5D2003BACAF /* User.swift in Sources */,
 				52055E74259DF5D2003BACAF /* Chats.swift in Sources */,
 				52055E66259DF5D2003BACAF /* LoginView.swift in Sources */,
 				52055E7A259DFD34003BACAF /* NewJobView.swift in Sources */,
+				52E43E20259F223500B01C47 /* Root.swift in Sources */,
 				52055E70259DF5D2003BACAF /* Message.swift in Sources */,
 				52055E6C259DF5D2003BACAF /* UsersView.swift in Sources */,
 				52055E65259DF5D2003BACAF /* RegistrationView.swift in Sources */,

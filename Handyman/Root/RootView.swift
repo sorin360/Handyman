@@ -8,44 +8,43 @@
 import SwiftUI
 import Firebase
 
-struct ContentView: View {
-    @State var presentLogin = false
+struct RootView: View {
     
-    @State var selectedTab: String = "Users"
+   @StateObject var root = Root()
     
     var body: some View {
         NavigationView {
-            TabView(selection: $selectedTab) {
+            TabView(selection: $root.selectedTab) {
                 UsersView()
                     .tabItem {
                         Image(systemName: "person.3")
-                        Text(selectedTab)
+                        Text(root.selectedTab)
                     }
                     .tag("Users")
                 JobsView()
                     .tabItem {
                         Image(systemName: "briefcase")
-                        Text(selectedTab)
+                        Text(root.selectedTab)
                     }
                     .tag("Jobs")
                 (Auth.auth().currentUser == nil ?
-                    AnyView(LoggedOutView(selectedTab: $selectedTab)):
+                    AnyView(LoggedOutView(selectedTab: $root.selectedTab)):
                     AnyView(ChatsView()))
                     .tabItem {
                         Image(systemName: "message")
-                        Text(selectedTab)
+                        Text(root.selectedTab)
                     }
                     .tag("Chats")
                 (Auth.auth().currentUser == nil ?
-                    AnyView(LoggedOutView(selectedTab: $selectedTab)):
-                    AnyView(ProfileView(selectedTab: $selectedTab)))
+                    AnyView(LoggedOutView(selectedTab: $root.selectedTab)):
+                    AnyView(ProfileView(selectedTab: $root.selectedTab)))
                     .tabItem {
                         Image(systemName: "person")
-                        Text(selectedTab)
+                        Text(root.selectedTab)
                     }
                     .tag("Profile")
             }
-            .navigationBarTitle(selectedTab)
+            .navigationBarTitle(root.selectedTab)
         }
         .navigationViewStyle(StackNavigationViewStyle())
   
@@ -54,6 +53,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView()
     }
 }
